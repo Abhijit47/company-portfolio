@@ -20,7 +20,7 @@
 
 // export default ServiceSection
 
-
+import PropTypes from 'prop-types';
 
 const ServiceSection = () => {
   return (
@@ -30,13 +30,13 @@ const ServiceSection = () => {
       <div className="container mx-auto relative z-10">
         <div className="flex justify-center">
           <div className="text-center max-w-lg">
-            <span className="text-white font-semibold relative inline-block animate-fadeInUp">
+            <span className="text-white font-semibold relative inline-block animate-fadeInUp text-xl">
               50% discount on early purchase
             </span>
-            <h2 className="text-white mt-3 mb-4 text-5xl font-bold animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+            <h2 className="text-white mt-3 mb-4 text-6xl font-bold animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
               Our Service Area
             </h2>
-            <p className="text-gray-300 font-medium leading-loose animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
+            <p className="text-gray-300 font-medium leading-tight animate-fadeInUp text-lg" style={{ animationDelay: '0.3s' }}>
               There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration, by injected humour.
             </p>
           </div>
@@ -70,19 +70,25 @@ const ServiceSection = () => {
 
 const ServiceCard = ({ imgSrc, title, description }) => {
   return (
-    <div className="flex gap-4 bg-white p-6 rounded-3xl shadow-lg animate-fadeInUp">
+    <div className="flex gap-4 bg-white p-10 rounded-3xl shadow-lg animate-fadeInUp">
       <span className="flex-shrink-0">
-        <img src={imgSrc} alt="icon" className="h-16 w-16" />
+        <img src={imgSrc} alt="icon" className="h-28 w-24" />
       </span>
       <div>
-        <h6 className="mb-4 font-semibold text-lg">{title}</h6>
-        <p className="mb-8 font-medium text-gray-600">{description}</p>
+        <h6 className="mb-4 font-semibold text-3xl">{title}</h6>
+        <p className="mb-8 font-medium text-gray-600 text-xl">{description}</p>
         <a href="" className="text-blue-600 font-semibold hover:underline">
           Get Started <span className="ml-2"><i className="fas fa-arrow-right"></i></span>
         </a>
       </div>
     </div>
   );
+};
+
+ServiceCard.propTypes = {
+  imgSrc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default ServiceSection;

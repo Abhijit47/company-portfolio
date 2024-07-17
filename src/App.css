@@ -1,3 +1,4 @@
+@import 'tailwindcss/tailwind.css';
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 .header-bg{
@@ -32,3 +33,38 @@
 .line-height-h2{
     line-height: 5rem!important;
 }
+
+.ticker{
+    background-image: url("https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/ticker-bg-1.png");
+}
+
+@keyframes ticker {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  
+  .ur-ticker {
+    animation: ticker 30s linear infinite;
+    padding-right: 100%;
+  }
+  
+
+  /* Add this in your tailwind.css or custom css file */
+.text-primary {
+    color: #5044EB;
+  }
+  
+  .bg-light-primary {
+    background-color: rgba(59, 56, 235, 0.1);
+  }
+  
+  .cr-subtitle {
+    /* Add specific styles here */
+  }
+  
+  /* Similarly, add any other required custom styles */
+  

@@ -1,7 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// import Header from "./Header";
-
 export default function HeroSection() {
     return (<>
         <div className="bg-cover bg-center bg-bottom header-bg -mt-52">
