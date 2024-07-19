@@ -1,25 +1,3 @@
-
-// function ServiceSection() {
-//   return (
-//     <div className="bg-gray-950 box-border">
-//       <div className="pt-24 relative z-1 block">
-//         <span className="w-40 h-40 bg-gray-700 rounded-full opacity-60 top-1/3 -left-20 absolute -z-10"></span>
-//         <span className="w-1/2 h-1/2 bg-gray-700 rounded-full opacity-60 -left-96 -bottom-72 absolute "></span>
-//         <div className="max-w-screen-xl flex">
-//             ll
-//         </div>
-        
-
-//       </div>
-//     </div>
-
-
-    
-//   )
-// }
-
-// export default ServiceSection
-
 import PropTypes from 'prop-types';
 
 const ServiceSection = () => {

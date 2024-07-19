@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function HeroSection() {
     return (<>
-        <div className="bg-cover bg-center bg-bottom header-bg -mt-52">
+        <div className=" bg-cover bg-center bg-bottom header-bg -mt-52">
             <div className="relative z-1 overflow-hidden pt-96 pb-56 bg-no-repeat  z-1">
                 <div className="w-max-[1320px]">
                     <div className="items-center flex mx-40">
@@ -28,3 +28,4 @@ export default function HeroSection() {
             </>
     )
 }
+

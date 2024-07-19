@@ -26,11 +26,11 @@ export default function Header() {
         setIsProjectsDropdownOpen(false);
     };
 
-    const closeDropdowns = () => {
-        setIsHomeDropdownOpen(false);
-        setIsProjectsDropdownOpen(false);
-        setIsBlogDropdownOpen(false);
-    };
+    // const closeDropdowns = () => {
+    //     setIsHomeDropdownOpen(false);
+    //     setIsProjectsDropdownOpen(false);
+    //     setIsBlogDropdownOpen(false);
+    // };
 
     return (
         <div className="relative flex justify-center z-10">

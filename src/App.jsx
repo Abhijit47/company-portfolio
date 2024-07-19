@@ -6,6 +6,8 @@ import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import ServiceSection from './components/ServiceSection'
 import TickerSection from './components/TickerSection'
+import ContactSection from './components/ContactSection'
+import FooterSection from './components/FooterSection'
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
     <ServiceSection/>
     <TickerSection/>
     <ExpertsSection/>
+    <ContactSection/>
+    <FooterSection/>
     </>
   )
 }
