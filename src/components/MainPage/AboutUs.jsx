@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import {Link} from 'react-router-dom'
 
 function AboutUs() {
   return (
 <section className="py-24 overflow-hidden">
-      <div className="flex flex-wrap items-center gap-5 reverse-info mx-56">
+      <div className="flex flex-wrap items-center gap-5 reverse-info md:mx-56 ">
         <div className="w-full lg:w-1/2">
           <div className="relative m-5">
             <img
@@ -18,7 +18,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="width_48">
+        <div className="md:w-[48%]">
           <div className="m-2"></div>
         
           <span className="text-blue-600 font-semibold text-2xl relative inline-block ">50% discount on early purchase</span>
@@ -31,12 +31,12 @@ function AboutUs() {
           </p>
 
           <div className="flex items-center gap-6 shadow-lg p-4">
-            <img src="https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/ab-2-1.jpg" className="max-w-28 h-auto border-none shadow-none rounded-md overflow-clip "/>
+            <img src="https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/ab-2-1.jpg" alt='' className="max-w-28 h-auto border-none shadow-none rounded-md overflow-clip "/>
             <p className="mb-0 text-lg text-gray-600 "> Leo in taciti conubia, arcu dapibus convallis commodo sour Bibendum tristique lacus aenean quisque ut primis torquent dis eget awesome company feewdbacks </p>
           </div>
           <div className="flex items-center gap-6 flex-wrap mt-20">
-          <a href="#" className="text-white shadow-none bg-blue-700 py-5 px-12 text-xl font-bold relative inline-block rounded-xl overflow-hidden ">More About Us</a>
-          <a href="#" className="text-blue-600 shadow-none bg-blue-50 border border-white py-5 px-12 text-xl font-bold relative inline-block rounded-xl overflow-hidden ">Get Started <FontAwesomeIcon icon="fa-solid fa-arrow-right" /></a>
+          <Link to="#" className="text-white shadow-none bg-blue-700 py-5 px-12 text-xl font-bold relative inline-block  rounded-xl overflow-hidden ">More About Us</Link>
+          <Link to="#" className="text-blue-600 shadow-none bg-blue-50 border border-white py-5 px-12 text-xl font-bold relative inline-block rounded-xl overflow-hidden ">Get Started <FontAwesomeIcon icon="fa-solid fa-arrow-right" /></Link>
           </div>
         </div> 
       </div>

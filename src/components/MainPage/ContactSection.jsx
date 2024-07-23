@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom'
 
 function ContactSection() {
   return (
@@ -6,9 +7,9 @@ function ContactSection() {
         <span className="absolute w-[600px] h-[600px] -left-[400px] -bottom-[400px] bg-[#283140] rounded-full "></span>
         <span className="absolute w-[800px] h-[800px] -right-[200px] -top-[200px] bg-[#283140] rounded-full "></span>
         <span className="absolute w-[800px] h-[800px] -left-[440px] -bottom-[440px] bg-[#283140] rounded-full  border-2 border-gray-500"></span>
-        <div className="container mx-auto relative z-10">
+        <div className="container mx-auto relative z-1">
             <div className="flex items-center">
-                <div className="w-1/2 px-6 mt-12 max-w-full">
+                <div className="md:w-1/2 px-6 mt-12 max-w-full">
                     <div className="contactInfo">
                         <span className="text-white text-xl border-b-2 relative font-semibold inline-block visible">100% discount on early purchase</span>
                         <h2 className="my-6 text-white font-bold text-7xl">Lets Work Together</h2>
@@ -33,7 +34,7 @@ function ContactSection() {
                         </ul>
                     </div>
                 </div>
-                <div className="w-1/2 px-6 mt-12 max-w-full">
+                <div className="md:w-1/2 px-6 mt-12 max-w-full">
                 <div className='bg-white p-[60px] rounded-[30px]'>
                     <h3 className='text-5xl leading-[50px] mb-8 text-[#1f1f1f] font-bold '>Get a free <span className='text-[#5044EB] bg-[#EBEBFD] px-2'>quote now</span></h3>
                     <div className='overflow-hidden'>
@@ -74,9 +75,9 @@ const ContactInfo = ({imgSrc, title, description}) => {
             </span>
             <div>
                 <span className='font-medium text-xl text-[#6b6b6b]'>{title}</span>
-                <a href='#' className='shadow-none decoration-none text-[#000]'>
+                <Link to='#' className='shadow-none decoration-none text-[#000]'>
                     <h6 className='mb-0 text-white font-semibold mt-1 text-2xl'>{description}</h6>
-                </a>
+                </Link>
             </div>
         </li>
     )

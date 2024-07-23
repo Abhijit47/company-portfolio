@@ -1,25 +1,16 @@
-
 import './App.css'
-import AboutUs from './components/AboutUs'
-import ExpertsSection from './components/ExpertsSection'
-import Header from './components/Header'
-import HeroSection from './components/HeroSection'
-import ServiceSection from './components/ServiceSection'
-import TickerSection from './components/TickerSection'
-import ContactSection from './components/ContactSection'
-import FooterSection from './components/FooterSection'
+import MainPage from './components/MainPage/MainPage';
+import AboutPage from './components/AboutPage/AboutPage'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
   return (
-    <>  
-    <Header/>
-    <HeroSection/>
-    <AboutUs/>
-    <ServiceSection/>
-    <TickerSection/>
-    <ExpertsSection/>
-    <ContactSection/>
-    <FooterSection/>
-    </>
+    <Router>
+    <Routes>  
+    <Route path='/' element={<MainPage/>} />
+    <Route path='/about' element={<AboutPage/>}  />
+    </Routes>
+    </Router>
+    
   )
 }

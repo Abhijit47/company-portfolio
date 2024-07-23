@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-
+import {Link} from 'react-router-dom'
 const ServiceSection = () => {
   return (
     <section className="relative overflow-hidden bg-gray-900 py-24">
       <span className="absolute w-40 h-40 bg-gray-700 opacity-60 rounded-full top-1/3 -left-20 z-0"></span>
       <span className="absolute w-[800px] h-[800px] bg-gray-700 opacity-60 rounded-full -left-[400px] -bottom-[300px] z-0"></span>
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto relative z-1">
         <div className="flex justify-center">
           <div className="text-center max-w-lg">
             <span className="text-white font-semibold relative inline-block animate-fadeInUp text-xl">
@@ -55,9 +55,9 @@ const ServiceCard = ({ imgSrc, title, description }) => {
       <div>
         <h6 className="mb-4 font-semibold text-3xl">{title}</h6>
         <p className="mb-8 font-medium text-gray-600 text-xl">{description}</p>
-        <a href="" className="text-blue-600 font-semibold hover:underline">
+        <Link to="" className="text-blue-600 font-semibold hover:underline">
           Get Started <span className="ml-2"><i className="fas fa-arrow-right"></i></span>
-        </a>
+        </Link>
       </div>
     </div>
   );
