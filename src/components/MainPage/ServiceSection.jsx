@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom'
+import React from 'react';
+
 const ServiceSection = () => {
   return (
     <section className="relative overflow-hidden bg-gray-900 py-24">

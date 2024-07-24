@@ -249,6 +249,7 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faLocationDot, faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import React from 'react';
 
 export default function Header({ textColor, textColor2 }) {
     const [isSticky, setIsSticky] = useState(false);

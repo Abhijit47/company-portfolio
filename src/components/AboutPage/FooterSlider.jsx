@@ -37,7 +37,7 @@ function FooterSlider() {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
-      },
+      }
     ],
   };
 

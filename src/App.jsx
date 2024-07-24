@@ -4,11 +4,12 @@ import AboutPage from './components/AboutPage/AboutPage'
 import BlogPage from './components/Blog/BlogPage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContactPage from './components/ContactPage/ContactPage';
+import React from 'react'
 
 export default function App() {
-  return (
+  return(
     <Router>
-    <Routes>  
+    <Routes>
     <Route path='/' element={<MainPage/>} />
     <Route path='/about' element={<AboutPage/>}  />
     <Route path='/blog' element={<BlogPage/>}  />

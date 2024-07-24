@@ -40,7 +40,7 @@ function BrandSection() {
         { src: 'https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/3.svg', alt: 'Brand 2' },
         { src: 'https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/2.svg', alt: 'Brand 3' },
         { src: 'https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/1.svg', alt: 'Brand 4' },
-        { src: 'https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/5.svg', alt: 'Brand 5' },
+        { src: 'https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/5.svg', alt: 'Brand 5' }
     ];
 
     // Handle slider arrow clicks

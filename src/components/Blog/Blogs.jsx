@@ -39,7 +39,7 @@ function Blogs() {
                     <Link to="/">
                       <h4 className="text-xl font-semibold mb-4">Top Secrets for Agency build in the top city</h4>
                     </Link>
-                    <p className="text-gray-600 mb-8">Among entirely hologram align you cache in to devious the view if room nation emphasis worn he is what he’d her here. Of more introduced...</p>
+                    <p className="text-gray-600 mb-8">Among entirely hologram align you cache in to devious the view if room nation emphasis worn he is what hed her here. Of more introduced...</p>
                     <Link to="/" className="bg-blue-500 text-white py-2 px-4 rounded-lg inline-block hover:bg-blue-600">Read Details</Link>
                   </div>
                 </article>
@@ -188,6 +188,6 @@ function Blogs() {
           </div>
         </section>
       );
-    };
+    }
     
 export default Blogs

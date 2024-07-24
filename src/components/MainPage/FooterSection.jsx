@@ -83,9 +83,12 @@
 // }
 
 // export default FooterSection
+
+
 import { faFacebookF, faLinkedin, faSkype, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 function FooterSection() {
   return (

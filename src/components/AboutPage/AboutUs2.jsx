@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 function AboutUs2() {
   return (
@@ -14,7 +15,7 @@ function AboutUs2() {
           />
         </div>
         <div className="w-full lg:w-[48%] px-4 lg:px-0">
-          <span className="text-blue-600 font-semibold text-xl md:text-2xl block relative inline-block mb-4 lg:mb-6">
+          <span className="text-blue-600 font-semibold text-xl md:text-2xl block relative mb-4 lg:mb-6">
             50% discount on early purchase
           </span>
           <h2 className="text-black text-4xl md:text-5xl lg:text-7xl mb-6 lg:mb-12 mt-4 lg:mt-6 font-bold">
