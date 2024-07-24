@@ -1,7 +1,9 @@
 import './App.css'
 import MainPage from './components/MainPage/MainPage';
 import AboutPage from './components/AboutPage/AboutPage'
+import BlogPage from './components/Blog/BlogPage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ContactPage from './components/ContactPage/ContactPage';
 
 export default function App() {
   return (
@@ -9,6 +11,8 @@ export default function App() {
     <Routes>  
     <Route path='/' element={<MainPage/>} />
     <Route path='/about' element={<AboutPage/>}  />
+    <Route path='/blog' element={<BlogPage/>}  />
+    <Route path='/contact' element={<ContactPage/>}  />
     </Routes>
     </Router>
     

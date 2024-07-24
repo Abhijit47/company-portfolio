@@ -5,6 +5,8 @@ import FooterSlider from './FooterSlider'
 import Header from '../MainPage/Header'
 import FooterSection from '../MainPage/FooterSection'
 import ServiceSection from '../MainPage/ServiceSection'
+import AboutUs2 from './AboutUs2';
+// import DreamerSection from './DreamerSection';
 
 function AboutPage() {
   return (
@@ -13,9 +15,9 @@ function AboutPage() {
     <Header textColor={"white"} textColor2={"white"}/>
     <BreadcrumbSection/>
     <FooterSlider/>  
-    <BrandSection/>
+    <AboutUs2/>
     <ServiceSection/>
-     
+    <BrandSection/>
     <FooterSection/> 
     </>
   )

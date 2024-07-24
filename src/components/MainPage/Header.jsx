@@ -247,15 +247,12 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faLocationDot, faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-export default function Header({textColor,textColor2}) {
+export default function Header({ textColor, textColor2 }) {
     const [isSticky, setIsSticky] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
-    const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false);
-    const [isBlogDropdownOpen, setIsBlogDropdownOpen] = useState(false);
 
     const handleScroll = () => {
         if (window.scrollY > 50) {
@@ -272,24 +269,6 @@ export default function Header({textColor,textColor2}) {
         };
     }, []);
 
-    const toggleHomeDropdown = () => {
-        setIsHomeDropdownOpen(!isHomeDropdownOpen);
-        setIsProjectsDropdownOpen(false);
-        setIsBlogDropdownOpen(false);
-    };
-
-    const toggleProjectsDropdown = () => {
-        setIsProjectsDropdownOpen(!isProjectsDropdownOpen);
-        setIsHomeDropdownOpen(false);
-        setIsBlogDropdownOpen(false);
-    };
-
-    const toggleBlogDropdown = () => {
-        setIsBlogDropdownOpen(!isBlogDropdownOpen);
-        setIsHomeDropdownOpen(false);
-        setIsProjectsDropdownOpen(false);
-    };
-
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -299,13 +278,12 @@ export default function Header({textColor,textColor2}) {
     };
 
     return (
-        <div className='header-section position-relative z-2'>
+        <div className="header-section position-relative z-2">
             <div className="relative flex justify-center z-10">
-                <div className="container"> 
-                    <div className='py-2 mobile-nav' >
+                <div className="container">
+                    <div className="py-2 mobile-nav">
                         <div className="flex items-center justify-between min-h-14">
                             <div className={`flex items-center gap-10 text-${textColor} w-1/2`}>
-                                {/* Removed href="#" to avoid nested links */}
                                 <div className="text-lg font-semibold flex items-center">
                                     <FontAwesomeIcon icon={faPhone} className="mr-2" />
                                     1044123456789
@@ -324,8 +302,7 @@ export default function Header({textColor,textColor2}) {
                                     <span className="text-lg">English</span>
                                 </div>
                                 <div className="flex items-center gap-5">
-                                    {/* Removed href="#" and replaced with functional Links or span */}
-                                    <span >
+                                    <span>
                                         <FontAwesomeIcon icon={faFacebookF} />
                                     </span>
                                     <span>
@@ -335,9 +312,14 @@ export default function Header({textColor,textColor2}) {
                             </div>
                         </div>
                     </div>
-                    <div className={`rounded-xl sticky top-0 z-[999999999] bg-white px-10 shadow-md header-sticky ${isSticky ? 'sticky-on' : ''}`}>
-                        <div className="flex items-center justify-between">
-                            <div className="w-1/6">
+
+                    <div
+                        className={`rounded-xl sticky top-0 z-[9999] bg-white px-10 lg:px-44 shadow-md header-sticky ${
+                            isSticky ? 'sticky-on' : ''
+                        }`}
+                    >
+                        <div className="flex items-center justify-between z-10">
+                            <div className="w-125px">
                                 {/* Proper link usage for logo */}
                                 <Link to="/">
                                     <img
@@ -347,97 +329,52 @@ export default function Header({textColor,textColor2}) {
                                     />
                                 </Link>
                             </div>
-                            <div className="w-7/12 pl-12 ">
+
+                            {/* Desktop Links: Hidden on Mobile */}
+                            <div className="hidden md:flex w-7/12 pl-12 justify-end">
                                 <ul className="flex space-x-4 text-gray-700 text-xl font-semibold justify-end">
                                     <li className="relative">
-                                        <Link
-                                            to="/"
-                                            className="block py-11 px-4 relative"
-                                            onMouseEnter={toggleHomeDropdown}
-                                            onMouseLeave={toggleHomeDropdown}
-                                        >
+                                        <Link to="/" className="block py-11 px-4 relative">
                                             Home
                                         </Link>
                                     </li>
                                     <li className="relative">
-                                        <Link
-                                            to="/projects"
-                                            className="block py-11 px-4"
-                                            onMouseEnter={toggleProjectsDropdown}
-                                            onMouseLeave={toggleProjectsDropdown}
-                                        >
+                                        <Link to="/projects" className="block py-11 px-4">
                                             Projects
-                                            <FontAwesomeIcon className='pl-2' icon="fa-solid fa-chevron-down" />
-                                            {isProjectsDropdownOpen && (
-                                                <ul className="absolute left-0 mt-1 w-48 bg-white shadow-lg z-10 py-2 text-left top-28">
-                                                    <li>
-                                                        <Link to="/projects/item1" className="block py-2 px-4">
-                                                            Submenu Item 1
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/projects/item2" className="block py-2 px-4">
-                                                            Submenu Item 2
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            )}
                                         </Link>
                                     </li>
                                     <li className="relative">
-                                        <Link
-                                            to="/blog"
-                                            className="block py-11 px-4"
-                                            onMouseEnter={toggleBlogDropdown}
-                                            onMouseLeave={toggleBlogDropdown}
-                                        >
+                                        <Link to="/blog" className="block py-11 px-4">
                                             Blog
-                                            <FontAwesomeIcon className='pl-2' icon="fa-solid fa-chevron-down" />
-                                            {isBlogDropdownOpen && (
-                                                <ul className="absolute left-0 mt-1 w-48 bg-white shadow-lg z-10 py-2 text-left top-28">
-                                                    <li>
-                                                        <Link to="/blog/item1" className="block py-2 px-4">
-                                                            Submenu Item 1
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/blog/item2" className="block py-2 px-4">
-                                                            Submenu Item 2
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            )}
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link
-                                            to="/about"
-                                            className="block py-11 px-4"
-                                        >
+                                        <Link to="/about" className="block py-11 px-4">
                                             About
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link
-                                            to="/contact"
-                                            className="block py-11 px-4"
-                                        >
+                                        <Link to="/contact" className="block py-11 px-4">
                                             Contact
                                         </Link>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="w-1/4 flex justify-end">
+
+                            {/* Desktop Contact Button */}
+                            <div className="hidden md:flex w-1/4 justify-end">
                                 <Link
                                     to="/contact"
-                                    className="bg-blue-600 text-white py-3.5 px-9 font-bold rounded-xl overflow-hidden text-xl hidden md:block"
+                                    className="bg-blue-600 text-white py-3.5 px-9 font-bold rounded-xl overflow-hidden text-xl"
                                 >
                                     Contact Us
                                 </Link>
                             </div>
-                            <div className="md:hidden flex items-center">
+
+                            {/* Mobile Menu Button */}
+                            <div className="md:hidden flex items-center h-[100px]">
                                 <button onClick={toggleMenu} className="text-gray-700 text-2xl">
-                                    <FontAwesomeIcon icon="fa-solid fa-bars" />
+                                    <FontAwesomeIcon icon={faBars} />
                                 </button>
                             </div>
                         </div>
@@ -445,8 +382,9 @@ export default function Header({textColor,textColor2}) {
                 </div>
             </div>
 
+            {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="fixed inset-0 bg-white z-50 md:hidden">
+                <div className="fixed inset-0 bg-white z-50 md:hidden transition-opacity duration-300 ease-in-out">
                     <div className="flex justify-between items-center p-5 border-b">
                         <Link to="/">
                             <img
@@ -456,29 +394,40 @@ export default function Header({textColor,textColor2}) {
                             />
                         </Link>
                         <button onClick={closeMenu} className="text-gray-700 text-2xl">
-                            <FontAwesomeIcon icon="fa-solid fa-times" />
+                            <FontAwesomeIcon icon={faTimes} />
                         </button>
                     </div>
                     <ul className="p-5 space-y-4">
                         <li>
-                            <Link to="/" className="text-lg font-semibold">Home</Link>
+                            <Link to="/" className="text-lg font-semibold" onClick={closeMenu}>
+                                Home
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/projects" className="text-lg font-semibold">Projects</Link>
+                            <Link to="/projects" className="text-lg font-semibold" onClick={closeMenu}>
+                                Projects
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/blog" className="text-lg font-semibold">Blog</Link>
+                            <Link to="/blog" className="text-lg font-semibold" onClick={closeMenu}>
+                                Blog
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/about" className="text-lg font-semibold">About</Link>
+                            <Link to="/about" className="text-lg font-semibold" onClick={closeMenu}>
+                                About
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/contact" className="text-lg font-semibold">Contact</Link>
+                            <Link to="/contact" className="text-lg font-semibold" onClick={closeMenu}>
+                                Contact
+                            </Link>
                         </li>
                         <li>
                             <Link
                                 to="/contact"
                                 className="bg-blue-600 text-white py-3 px-10 font-bold rounded-xl text-center"
+                                onClick={closeMenu}
                             >
                                 Contact Us
                             </Link>
@@ -489,3 +438,4 @@ export default function Header({textColor,textColor2}) {
         </div>
     );
 }
+
